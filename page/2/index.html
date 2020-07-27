@@ -1,0 +1,235 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Konikishi</title><meta name="description"><meta name="author" content="Konikishi"><meta name="copyright" content="Konikishi"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://konikishi.github.io/page/2/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="website"><meta property="og:title" content="Konikishi"><meta property="og:url" content="https://konikishi.github.io/page/2/"><meta property="og:site_name" content="Konikishi"><meta property="og:description"><meta property="og:image" content="https://konikishi.github.io/img/avatar.png"><meta property="article:published_time" content="2020-07-27T07:54:30.864Z"><meta property="article:modified_time" content="2020-07-27T07:54:30.864Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: false,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: true,
+  fancybox: false,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isSidebar: false
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.1"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">20</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">8</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/album/"><i class="fa-fw fas fa-image"></i><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 工具</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://i.loli.net/2020/07/20/voTKhrx4eF6zQdq.jpg)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Konikishi</a></span><span class="pull-right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/album/"><i class="fa-fw fas fa-image"></i><span> 相册</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 工具</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="site-info"><h1 id="site_title">Konikishi</h1><div id="site_subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/konikishi" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:konikishi@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll_down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout_page" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/08/11/Node-dgram/" title="node-dgram">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="node-dgram"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/08/11/Node-dgram/" title="node-dgram">node-dgram</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2019-08-11 00:00:00"><i class="far fa-calendar-alt"></i>2019-08-11</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">UDP协议UDP虽然传递数据不可靠，无连接，但是有传递速度快的特点，在传送音频、影视、图片时，少点数据无伤大雅，可以考虑用UDP。
+dgram模块Node中UDP对应的模块是dgram，通过下面的方式引用UDP模块并创建UDP应用实例：
+12var dgram = require('dgram');var udp = dgram.createSocket('udp4');
+
+客户端123456789101112131415const dgram = require('dgram');const client = dgram.createSocket('udp4');client.on('close', () =&gt; &#123;    console.log('socket已关闭');&#125;);client.on('error', (err) =&gt; &#123;    console.log(err);&#125;);client.on('message', (msg, rinfo) =&gt; &#123;    if (msg == 'exit') client.c ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2019/08/10/Node-async/" title="node-async">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="node-async"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/08/10/Node-async/" title="node-async">node-async</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2019-08-10 00:00:00"><i class="far fa-calendar-alt"></i>2019-08-10</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">AsyncNode.js 是一个异步机制的服务端语言，在大量异步的场景下需要按顺序执行，那正常做法就是回调嵌套回调，回调嵌套太多的问题被称之回调地狱。
+Node.js 为解决这一问题推出了异步控制流 ———— Async
+Async/AwaitAsync/Await 就 ES7 的方案，结合 ES6 的 Promise 对象，使用前请确定 Node.js 的版本是 7.6 以上。
+Async/await的主要益处是可以避免回调地狱（callback hell），且以最接近同步代码的方式编写异步代码。
+基本规则
+async 表示这是一个async函数，await只能用在这个函数里面。
+await 表示在这里等待promise返回结果了，再继续执行。
+await 后面跟着的应该是一个promise对象
+
+对比使用场景：3秒后返回一个值
+原始时代12345678910111213let sleep = (time, cb) =&gt; &#123;    setTimeout(() =&gt; &#123;        cb('ok');    &#125;, 3000);&#125;le ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/08/05/ES6/" title="ES6新特性">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="ES6新特性"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/08/05/ES6/" title="ES6新特性">ES6新特性</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2019-08-05 00:00:00"><i class="far fa-calendar-alt"></i>2019-08-05</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">let 命令代码块内有效let 是在代码块内有效，var 是在全局范围内有效:
+不能重复声明let 只能声明一次 var 可以声明多次:for 循环计数器很适合用 let
+123456789101112for (var i &#x3D; 0; i &lt; 10; i++) &#123;  setTimeout(function()&#123;    console.log(i);  &#125;)&#125;&#x2F;&#x2F; 输出十个 10for (let j &#x3D; 0; j &lt; 10; j++) &#123;  setTimeout(function()&#123;    console.log(j);  &#125;)&#125;&#x2F;&#x2F; 输出 0123456789
+变量 i 是用 var 声明的，在全局范围内有效，所以全局中只有一个变量 i, 每次循环时，setTimeout 定时器里面的 i 指的是全局变量 i ，而循环里的十个 setTimeout 是在循环结束后才执行，所以此时的 i 都是 10。
+变量 j 是用 let 声明的，当前 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2019/08/01/Node-base/" title="node-基础">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="node-基础"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/08/01/Node-base/" title="node-基础">node-基础</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2019-08-01 00:00:00"><i class="far fa-calendar-alt"></i>2019-08-01</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">认识 Node.js
+Node 是一个服务器端 JavaScript 解释器
+Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境
+Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效
+Node.js 的包管理器 npm，是全球最大的开源库生态系统
+Node.js 是一门动态语言，运行在服务端的 Javascript
+
+版本介绍
+在命令窗口中输入 node -v 可以查看版本
+0.x 完全不技术 ES6
+4.x 部分支持 ES6 特性
+5.x 部分支持ES6特性（比4.x多些），属于过渡产品，现在来说应该没有什么理由去用这个了
+6.x 支持98%的 ES6 特性
+8.x 支持 ES6 特性
+
+环境搭建
+下载安装文件
+下载完后进行安装，建议安装到默认路径，注意不要有中文路径
+配置环境变量
+在命令窗口中输入 node -v，如果正常显示版本号则表示安装成功
+
+REPL(交互式解释器)在命令窗口输入 node 后回车，便可进入到 REPL 模式，在这个模式里可以输入 Javascript 的脚本语法，node 会自动将语法执行。类似于 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/07/10/Webpack/" title="webpack教程">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="webpack教程"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/07/10/Webpack/" title="webpack教程">webpack教程</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2019-07-10 00:00:00"><i class="far fa-calendar-alt"></i>2019-07-10</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></span></div><div class="content">Webpack1.1 Webpack概念
+定义：模块打包工具
+几种引入规范：
+
+123456781、ES Module 模块引入方式:import export(构造函数)2、CommonJS 模块引入规范：require（跟Node一样）module.exports3、CMD4、ADM
+
+1.2 安装与使用
+安装：
+
+12npm init 项目名npm install webpack webpack-cli -D
+
+
+使用（生成main.js)：
+
+1npx webpack index.js
+
+
+注：npx会帮我们在项目目录中的node_modules查找webpack
+
+1.3 webpack配置
+默认配置文件：webpack.config.js(需手动创建)。
+
+123456789101112131415const path &#x3D; require(&#39;path&#39;);module.exports &#x3D; &#123;	&#x2F;&#x2F;配置模式，默认是production（会压缩js），可以是development（就不会压缩）	mode: &#3 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2019/07/05/Node/" title="node知识点">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="node知识点"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/07/05/Node/" title="node知识点">node知识点</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2019-07-05 00:00:00"><i class="far fa-calendar-alt"></i>2019-07-05</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">创建服务器1234567891011var http = require('http');http.createServer(function (request, response) &#123;    // 发送 HTTP 头部     // HTTP 状态值: 200 : OK    // 内容类型: text/plain    response.writeHead(200, &#123;'Content-Type': 'text/plain'&#125;);    // 发送响应数据 "Hello World"    response.end('Hello World\n');&#125;).listen(8888);// 终端打印如下信息console.log('Server running at http://127.0.0.1:8888/');
+
+下划线(_)变量你可以使用下划线(_)获取上一个表达式的运算结果：
+12345678910111213$ node&gt; var x = 10undefined&gt; var y = 20undefined&gt; x + y ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/05/10/Vue%E5%9F%BA%E7%A1%80/" title="vue教程">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue教程"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/05/10/Vue%E5%9F%BA%E7%A1%80/" title="vue教程">vue教程</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2019-05-10 00:00:00"><i class="far fa-calendar-alt"></i>2019-05-10</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></span></div><div class="content">介绍Vue.js 是什么Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。
+安装直接用引入1&lt;script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"&gt;&lt;/script&gt;
+
+NPM1$ npm install vue
+
+CLI1npm install -g @vue/cli
+
+
+
+基础实例创建每个 Vue 应用都是通过用 Vue 函数创建一个新的 Vue 实例开始的：
+123var vm = new Vue(&#123;  // 选项&#125;)
+
+数据和方法当一个 Vue 实例被创建时，它将 data 对象中的所有的 property 加入到 Vue 的响应式系统中。当这些 property 的值发生改变时，视图将会产生“响应”，即匹配更新为新的值。值得注意的是只有当实例被创建时就已经存在于 data 中的 property 才是 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2019/05/08/JS/" title="js知识点">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="js知识点"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/05/08/JS/" title="js知识点">js知识点</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2019-05-08 00:00:00"><i class="far fa-calendar-alt"></i>2019-05-08</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">直接写入 HTML 输出流12document.write(&quot;&lt;h1&gt;这是一个标题&lt;&#x2F;h1&gt;&quot;);document.write(&quot;&lt;p&gt;这是一个段落。&lt;&#x2F;p&gt;&quot;);
+
+
+只能在 HTML 输出中使用 document.write。如果您在文档加载后使用该方法，会覆盖整个文档。
+改变 HTML 内容12x&#x3D;document.getElementById(&quot;demo&quot;);  &#x2F;&#x2F;查找元素x.innerHTML&#x3D;&quot;Hello JavaScript&quot;;    &#x2F;&#x2F;改变内容
+
+
+修改自身元素的内容 (使用 this.innerHTML)
+字面量数字（Number）字面量 可以是整数或者是小数，或者是科学计数(e)。
+1233.141001123e5
+
+
+字符串（String）字面量 可以使用单引号或双引号。
+12&quot;John Doe&quot;&#39;John Doe&#39;
+
+ ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2019/04/05/Mongo/" title="mongoose教程">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="mongoose教程"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/04/05/Mongo/" title="mongoose教程">mongoose教程</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2019-04-05 00:00:00"><i class="far fa-calendar-alt"></i>2019-04-05</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></span></div><div class="content">MongoDBMongoDB 是一个基于==分布式==文件存储的数据库。    
+MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是==非关系数据==库当中功能最丰富，最像关系数据库的。
+Mongoosenode环境下对mongodb进行便捷操作的对象模型工具。
+安装1npm install mongoose
+
+初始化1234567891011//引用包const mongoose = require('mongoose');//连接mongoose.connect(    'mongodb://localhost:27017/test',    &#123;        useNewUrlParser: true,         useUnifiedTopology: true,        useCreateIndex:true    &#125;);
+
+创建表123456//Schema为表的结构var kittySchema = mongoose.Schema(&#123;  name: String&#125;);//编译成modelvar Kitten  ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2019/01/05/Express/" title="express教程">     <img class="post_bg" data-src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="express教程"></a></div><div class="recent-post-info"><a class="article-title" href="/2019/01/05/Express/" title="express教程">express教程</a><div class="article-meta-wrap"><time class="post-meta__date" title="发表于 2019-01-05 00:00:00"><i class="far fa-calendar-alt"></i>2019-01-05</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fas fa-inbox article-meta__icon"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></span></div><div class="content">安装1234//创建一个 package.json 文件npm init//安装依赖npm install express --save
+
+初始化123456789//引入包const express = require('express')//创建实例const app = express()//路由app.get('/', (req, res) =&gt; res.send('Hello World!'))//监听端口const port = 3000app.listen(port, () =&gt; console.log(`Example app listening on port $&#123;port&#125;!`))
+
+静态文件托管为了使用静态文件(html、css、js、img等)，使用 Express 中的 express.static 内置中间件函数。
+123//根路径带有地址则访问时必须加上才能访问//public为指定的静态文件夹app.use('/static', express.static('public'))
+
+CORS跨域安装cors
+1npm i  ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Konikishi</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives"><div class="headline">文章</div><div class="length_num">20</div></a></div><div class="card-info-data-item is-center">      <a href="/tags"><div class="headline">标签</div><div class="length_num">8</div></a></div><div class="card-info-data-item is-center">     <a href="/categories"><div class="headline">分类</div><div class="length_num">2</div></a></div></div><div class="card-info-bookmark is-center"><button class="button--animated" id="bookmark-it" title="加入书签"><i class="fas fa-bookmark"></i><span>加入书签</span></button></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/konikishi" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:konikishi@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="card-widget card-categories"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><ul class="card-category-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="card-category-list-name">学习笔记</span><span class="card-category-list-count">16</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E7%A8%8B/"><span class="card-category-list-name">教程</span><span class="card-category-list-count">4</span></a></li>
+                       
+            </ul></div></div><div class="card-widget card-tags"><div class="card-content"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/express-node/" style="font-size: 16px; color: #999">express node</a> <a href="/tags/js/" style="font-size: 18px; color: #999ea6">js</a> <a href="/tags/mongoose-%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 16px; color: #999">mongoose 数据库</a> <a href="/tags/node/" style="font-size: 22px; color: #99a9bf">node</a> <a href="/tags/node-dgram/" style="font-size: 16px; color: #999">node dgram</a> <a href="/tags/node-express/" style="font-size: 16px; color: #999">node express</a> <a href="/tags/vue/" style="font-size: 20px; color: #99a4b2">vue</a> <a href="/tags/webpack/" style="font-size: 16px; color: #999">webpack</a></div></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-article-name">文章数目 :</div><div class="webinfo-article-count">20</div></div><div class="webinfo-item"><div class="webinfo-site-name">本站总访问量 :</div><div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://i.loli.net/2020/07/20/voTKhrx4eF6zQdq.jpg)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2020 By Konikishi</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button class="translate_chn_to_cht" id="translateLink" title="简繁转换">繁</button><button id="darkmode" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script id="ribbon_piao" mobile="false" src="/js/third-party/piao.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="/js/search/local-search.js"></script><script src="https://cdn.jsdelivr.net/npm/typed.js"></script><script>var subtitleType = function () {
+  var subtitleEffect = true
+  fetch('https://v1.hitokoto.cn')
+    .then(function (res) {
+      return res.json()
+    })
+    .then(function (data) {
+      if (subtitleEffect) {
+        var from = '出自 ' + data.from
+        var sub = "今日事&#44;今日畢,Never put off till tomorrow what you can do today".length == 0 ? new Array() : "今日事&#44;今日畢,Never put off till tomorrow what you can do today".split(',')
+        var both = sub.unshift(data.hitokoto, from)
+        var typed = new Typed('#subtitle', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('subtitle').innerHTML = data.hitokoto
+      }
+    })
+    .catch(function (err) {
+      console.error(err)
+    })
+}
+window.addEventListener('load', subtitleType)
+</script></body></html>
